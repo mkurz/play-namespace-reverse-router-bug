@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/mkurz/namespace-reverse-router-bug/conf/routes
-// @DATE:Mon Mar 30 12:49:33 CEST 2020
+// @DATE:Mon Mar 30 12:59:14 CEST 2020
 
 package router.controllers;
 

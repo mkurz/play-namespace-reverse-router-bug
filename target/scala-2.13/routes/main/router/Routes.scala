@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/mkurz/namespace-reverse-router-bug/conf/routes
-// @DATE:Mon Mar 30 12:49:33 CEST 2020
+// @DATE:Mon Mar 30 12:59:14 CEST 2020
 
 package router
 
@@ -14,14 +14,14 @@ import _root_.controllers.Assets.Asset
 class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:1
-  Assets_0: controllers.Assets,
+  Assets_0: _root_.controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
 
    @javax.inject.Inject()
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:1
-    Assets_0: controllers.Assets
+    Assets_0: _root_.controllers.Assets
   ) = this(errorHandler, Assets_0, "/")
 
   def withPrefix(addPrefix: String): Routes = {
@@ -35,7 +35,7 @@ class Routes(
   }
 
   def documentation = List(
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(file:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """_root_.controllers.Assets.versioned(file:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -44,14 +44,14 @@ class Routes(
 
 
   // @LINE:1
-  private[this] lazy val controllers_Assets_versioned0_route = Route("GET",
+  private[this] lazy val _root__controllers_Assets_versioned0_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned0_invoker = createInvoker(
+  private[this] lazy val _root__controllers_Assets_versioned0_invoker = createInvoker(
     Assets_0.versioned(fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.Assets",
+      "_root_.controllers.Assets",
       "versioned",
       Seq(classOf[String]),
       "GET",
@@ -65,9 +65,9 @@ class Routes(
   def routes: PartialFunction[RequestHeader, Handler] = {
   
     // @LINE:1
-    case controllers_Assets_versioned0_route(params@_) =>
+    case _root__controllers_Assets_versioned0_route(params@_) =>
       call(params.fromPath[String]("file", None)) { (file) =>
-        controllers_Assets_versioned0_invoker.call(Assets_0.versioned(file))
+        _root__controllers_Assets_versioned0_invoker.call(Assets_0.versioned(file))
       }
   }
 }
