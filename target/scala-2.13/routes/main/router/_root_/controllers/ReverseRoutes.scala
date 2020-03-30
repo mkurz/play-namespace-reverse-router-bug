@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/mkurz/namespace-reverse-router-bug/conf/routes
-// @DATE:Mon Mar 30 12:49:33 CEST 2020
+// @DATE:Mon Mar 30 12:51:53 CEST 2020
 
 import play.api.mvc.Call
 
@@ -8,7 +8,7 @@ import play.api.mvc.Call
 import _root_.controllers.Assets.Asset
 
 // @LINE:1
-package router.controllers {
+package router._root_.controllers {
 
   // @LINE:1
   class ReverseAssets(_prefix: => String) {
