@@ -1,1 +1,1 @@
-GET     /assets/*file               controllers.Assets.versioned(file)
+GET     /assets/*file               _root_.controllers.Assets.versioned(file)
